@@ -19,6 +19,7 @@
     "express": "^4.16.4",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0"
+    "uikit": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",
