@@ -24,17 +24,59 @@
           GitHub
         </a>
       </div>
+      <div class="row text-center">
+        <h3>Clicked: {{ getCounter }} times, count is {{ evenOrOdd }}.</h3>
+        <button class="btn btn-success" @click="increment">
+          +
+        </button>
+        <button class="btn btn-danger" @click="decrement">
+          -
+        </button>
+        <button class="btn" @click="incrementIfOdd">
+          Increment if odd
+        </button>
+        <button class="btn" @click="incrementAsync">
+          Increment async
+        </button>
+        <nuxt-link to="/about">
+          about
+        </nuxt-link>
+        <div v-if="getErrResponseFilm === false">
+          {{ JSON.stringify(getResponseFilm) }}
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
     Logo
-  }
+  },
+  data() {
+    return {
+      tesaat: 'aaaaa'
+    }
+  },
+  computed: mapGetters([
+    'getCounter',
+    'evenOrOdd',
+    'getResponseFilm',
+    'getErrResponseFilm'
+  ]),
+  created() {
+    this.incrementAsync()
+  },
+  methods: mapActions([
+    'increment',
+    'decrement',
+    'incrementIfOdd',
+    'incrementAsync'
+  ])
 }
 </script>
 
