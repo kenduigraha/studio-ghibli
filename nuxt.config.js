@@ -24,12 +24,12 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['uikit/dist/css/uikit.css'],
+  css: [],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '~/plugins/uikit.js', ssr: false }],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
