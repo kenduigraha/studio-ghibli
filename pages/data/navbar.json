@@ -1,0 +1,22 @@
+[
+  {
+    "text": "Films",
+    "link": "/"
+  },
+  {
+    "text": "People",
+    "link": "/people"
+  },
+  {
+    "text": "Locations",
+    "link": "/locations"
+  },
+  {
+    "text": "Species",
+    "link": "/species"
+  },
+  {
+    "text": "Vehicle",
+    "link": "/vehicle"
+  }
+]
