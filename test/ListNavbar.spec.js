@@ -1,5 +1,5 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
-import ListNavbarComponent from '../components/ListNavbar'
+import ListNavbarComponent from '@/components/ListNavbar'
 
 const mockProps = {
   text: 'home',

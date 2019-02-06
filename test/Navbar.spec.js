@@ -1,5 +1,6 @@
-import { shallowMount, RouterLinkStub } from '@vue/test-utils'
-import NavbarComponent from '../components/Navbar'
+import { mount, shallowMount, RouterLinkStub } from '@vue/test-utils'
+import NavbarComponent from '@/components/Navbar'
+import ListNavBarComponent from '@/components/ListNavbar'
 
 const mockProps = [
   {
@@ -34,5 +35,16 @@ describe('test navbar component', () => {
     })
 
     expect(wrapper.props().dataNavbar).toEqual(mockProps)
+  })
+
+  test('it should render ListNavBarComponent as child component', () => {
+    const wrapper = mount(NavbarComponent, {
+      stubs: {
+        NuxtLink: RouterLinkStub,
+        ListNavBarComponent: true
+      }
+    })
+
+    expect(wrapper.find(ListNavBarComponent).exists()).toBe(true)
   })
 })
