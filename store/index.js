@@ -1,6 +1,6 @@
 import Vuex from 'vuex'
 
-import mutations from './mutations'
+import { mutations } from './mutations'
 import { counterAction } from './actions'
 
 const state = {

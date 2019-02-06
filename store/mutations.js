@@ -1,4 +1,4 @@
-const mutations = {
+export const mutations = {
   increment(state) {
     state.counter++
   },
@@ -12,5 +12,3 @@ const mutations = {
     state.errResponseFilm = true
   }
 }
-
-export default mutations
