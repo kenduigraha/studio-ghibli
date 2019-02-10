@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-child-width-expand@s" uk-grid>
+  <div class="uk-child-width-expand@s uk-margin-medium" uk-grid>
     <div class="uk-grid-item-match">
       <div class="uk-card uk-card-default uk-card-body">
         <h3>{{ film.title }}</h3>

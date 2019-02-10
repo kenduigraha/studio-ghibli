@@ -19,8 +19,8 @@ const doWrapperComponent = () => {
   })
 }
 
-describe('test navbar component', () => {
-  test('it should success mounting ListFIlm component', () => {
+describe('test ListFilm component', () => {
+  test('it should success mounting ListFilm component', () => {
     const wrapper = doWrapperComponent()
 
     expect(wrapper).toBeTruthy()
