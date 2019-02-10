@@ -1,19 +1,19 @@
 import Vuex from 'vuex'
 
 import { mutations } from './mutations'
-import { counterAction } from './actions'
+import { ghibliAction } from './actions'
 
 const state = {
   counter: 0,
-  responseFilm: {},
-  errResponseFilm: false
+  data: {},
+  error: false
 }
 
 const getters = {
   getCounter: state => state.counter,
   evenOrOdd: state => (state.counter % 2 === 0 ? 'even' : 'odd'),
-  getResponseFilm: state => state.responseFilm,
-  getErrResponseFilm: state => state.errResponseFilm
+  getFetchData: state => state.data,
+  getErrorFetchData: state => state.error
 }
 
 const createStore = () => {
@@ -21,7 +21,7 @@ const createStore = () => {
     state,
     getters,
     mutations,
-    actions: counterAction
+    actions: ghibliAction
   })
 }
 

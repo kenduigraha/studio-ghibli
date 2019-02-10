@@ -1,6 +1,6 @@
 import { mutations } from '~/store/mutations'
 
-const { increment, getResponseFilm } = mutations
+const { increment } = mutations
 
 describe('test all mutations', () => {
   it('INCREMENT', () => {
@@ -10,15 +10,5 @@ describe('test all mutations', () => {
     increment(state)
     // assert result
     expect(state.counter).toStrictEqual(1)
-  })
-
-  it('getResponseFilm', () => {
-    const state = { responseFilm: {} }
-    const mockResponseFilm = {
-      response: 'ululu'
-    }
-    getResponseFilm(state, mockResponseFilm)
-
-    expect(state.responseFilm).toEqual(mockResponseFilm)
   })
 })
