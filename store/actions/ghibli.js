@@ -1,11 +1,10 @@
 import RequestFactory from '../../repository/request/RequestFactory'
 
 const ghibliAction = {
-  fetchData({ commit }, payload = { params: 'films' }) {
-    const { params } = payload
+  fetchData({ commit }, { params = 'films', id = '' }) {
     return new Promise((resolve, reject) => {
       RequestFactory.feature(params)
-        .get()
+        .get(id)
         .then(function(response) {
           // eslint-disable-next-line no-console
           console.log(response)

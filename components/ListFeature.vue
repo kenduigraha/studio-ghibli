@@ -1,28 +1,57 @@
 <template>
   <section>
     <div v-if="params === 'films'">
-      <div v-for="film in getFetchData" :key="film.id">
-        <ListFilm :film="film" />
+      <div v-if="getFetchData.length > 0">
+        <div v-for="film in getFetchData" :key="film.id">
+          <ListFilm :film="film" />
+        </div>
+      </div>
+      <div v-else>
+        <ListFilm :film="getFetchData" />
       </div>
     </div>
+
     <div v-if="params === 'people'">
-      <div v-for="people in getFetchData" :key="people.id" class="uk-flex-center">
-        <ListPeople :people="people" />
+      <div v-if="getFetchData.length > 0">
+        <div v-for="people in getFetchData" :key="people.id" class="uk-flex-center">
+          <ListPeople :people="people" />
+        </div>
+      </div>
+      <div v-else>
+        <ListPeople :people="getFetchData" />
       </div>
     </div>
+
     <div v-if="params === 'locations'">
-      <div v-for="location in getFetchData" :key="location.id">
-        <ListLocation :location="location" />
+      <div v-if="getFetchData.length > 0">
+        <div v-for="location in getFetchData" :key="location.id">
+          <ListLocation :location="location" />
+        </div>
+      </div>
+      <div v-else>
+        <ListLocation :location="getFetchData" />
       </div>
     </div>
+
     <div v-if="params === 'species'">
-      <div v-for="species in getFetchData" :key="species.id">
-        <ListSpecies :species="species" />
+      <div v-if="getFetchData.length > 0">
+        <div v-for="species in getFetchData" :key="species.id">
+          <ListSpecies :species="species" />
+        </div>
+      </div>
+      <div v-else>
+        <ListSpecies :species="getFetchData" />
       </div>
     </div>
+
     <div v-if="params === 'vehicle'">
-      <div v-for="vehicle in getFetchData" :key="vehicle.id">
-        <ListVehicle :vehicle="vehicle" />
+      <div v-if="getFetchData.length > 0">
+        <div v-for="vehicle in getFetchData" :key="vehicle.id">
+          <ListVehicle :vehicle="vehicle" />
+        </div>
+      </div>
+      <div v-else>
+        <ListVehicle :vehicle="getFetchData" />
       </div>
     </div>
   </section>
