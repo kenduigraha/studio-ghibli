@@ -1,7 +1,11 @@
 [
   {
-    "text": "Films",
+    "text": "Home",
     "link": "/"
+  },
+  {
+    "text": "Films",
+    "link": "/films"
   },
   {
     "text": "People",

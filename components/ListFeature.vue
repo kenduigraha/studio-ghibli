@@ -2,12 +2,13 @@
   <section>
     <div class="uk-card uk-card-body">
       {{ params }}
+      {{ getFetchData }}
     </div>
   </section>
 </template>
 
 <script>
-// import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'ListFeature',
@@ -16,15 +17,13 @@ export default {
       type: String,
       default: () => ''
     }
+  },
+  computed: mapGetters(['getFetchData']),
+  created() {
+    this.fetchData({ params: this.params })
+  },
+  methods: {
+    ...mapActions(['fetchData'])
   }
-  // created() {
-  //   this.fetchData(this.params)
-  // },
-  // methods: mapActions([
-  //   'fetchData'
-  // ]),
-  // computed: mapGetters([
-  //   'getResponse',
-  // ]),
 }
 </script>
