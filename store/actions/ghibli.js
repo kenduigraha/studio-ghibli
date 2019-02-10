@@ -10,7 +10,7 @@ const ghibliAction = {
           // eslint-disable-next-line no-console
           console.log(response)
           // handle success
-          commit('FETCH_DATA_SUCCESS', response)
+          commit('FETCH_DATA_SUCCESS', response.data)
           resolve()
         })
         .catch(function(error) {
