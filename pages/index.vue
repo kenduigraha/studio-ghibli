@@ -7,7 +7,6 @@
 <script>
 // import Logo from '~/components/Logo.vue'
 import Navbar from '~/components/Navbar.vue'
-import { mapGetters, mapActions } from 'vuex'
 import dataNavbar from './data/navbar.json'
 
 export default {
@@ -19,22 +18,7 @@ export default {
     return {
       dataNavbar
     }
-  },
-  computed: mapGetters([
-    'getCounter',
-    'evenOrOdd',
-    'getResponseFilm',
-    'getErrResponseFilm'
-  ]),
-  created() {
-    this.incrementAsync()
-  },
-  methods: mapActions([
-    'increment',
-    'decrement',
-    'incrementIfOdd',
-    'incrementAsync'
-  ])
+  }
 }
 </script>
 

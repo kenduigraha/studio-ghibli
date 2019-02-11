@@ -2,8 +2,8 @@ import axiosWrapper from '../axiosWrapper'
 
 const endpoint = '/films'
 
-const get = () => {
-  return axiosWrapper.get(`${endpoint}`)
+const get = id => {
+  return axiosWrapper.get(`${endpoint}/${id}`)
 }
 
 const post = data => {
