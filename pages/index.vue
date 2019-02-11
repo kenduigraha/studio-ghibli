@@ -1,39 +1,23 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        studio-ghibli
-      </h1>
-      <h2 class="subtitle">
-        nuxt with ghibli api
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <section>
+    <Navbar :data-navbar="dataNavbar" />
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+// import Logo from '~/components/Logo.vue'
+import Navbar from '~/components/Navbar.vue'
+import dataNavbar from './data/navbar.json'
 
 export default {
   components: {
-    Logo
+    // Logo,
+    Navbar
+  },
+  data() {
+    return {
+      dataNavbar
+    }
   }
 }
 </script>
