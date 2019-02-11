@@ -54,15 +54,3 @@ export default {
   padding-top: 15px;
 }
 </style>
-
-<style lang="less">
-@width: 10px;
-@height: @width + 10px;
-@color: black;
-
-#header {
-  width: @width;
-  height: @height;
-  background-color: @color;
-}
-</style>
