@@ -1,3 +1,3 @@
-import counterAction from './counter'
+import ghibliAction from './ghibli'
 
-export { counterAction }
+export { ghibliAction }

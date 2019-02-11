@@ -1,16 +1,14 @@
-const mutations = {
+export const mutations = {
   increment(state) {
     state.counter++
   },
   decrement(state) {
     state.counter--
   },
-  getResponseFilm(state, responseFilm) {
-    state.responseFilm = responseFilm
+  FETCH_DATA_SUCCESS(state, payload) {
+    state.data = payload
   },
-  responseFilmError(state) {
-    state.errResponseFilm = true
+  FETCH_DATA_FAILED(state) {
+    state.error = true
   }
 }
-
-export default mutations

@@ -1,11 +1,21 @@
-import { apiFilm } from './APIRepository'
+import {
+  apiFilm,
+  apiLocations,
+  apiPeople,
+  apiSpecies,
+  apiVehicle
+} from './APIRepository'
 
 const requestRepository = {
-  films: apiFilm
+  films: apiFilm,
+  locations: apiLocations,
+  people: apiPeople,
+  species: apiSpecies,
+  vehicle: apiVehicle
 }
 
 const RequestFactory = {
-  get: name => {
+  feature: name => {
     return requestRepository[name]
   }
 }
